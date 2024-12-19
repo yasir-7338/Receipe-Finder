@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder and Meal Planner</title>
+    <link rel="stylesheet" href="style.css">
+   
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+
+</head>
+<body>
+    
+    <!-- About Modal Section -->
+    <div id="about-symbol" title="About">ℹ</div>
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+
+        <h2>About Recipe Finder and Meal Planner</h2>
+        <p>
+            Welcome to <strong>Recipe Finder and Meal Planner</strong> — your ultimate companion in discovering delicious recipes and organizing your weekly meal plans with effortlessness. Our platform helps you to explore a variety of recipes based on ingredients you already have. You can also create and download custom weekly meal plans to keep your meals organized and healthy.
+        </p>
+        <p>
+            <strong>Features:</strong><br>
+         <p><ul>
+            <li>Discover recipes based on ingredients name or recipe name.</li>
+            <li>Filter recipes by dietary preferences (Vegetarian, Non-Vegetarian).</li>
+            <li>Organize your weekly meals.</li>
+            <li>Download your weekly meal plan as a PDF.</li>
+        </ul>
+        </p></p>
+        <h3>Meet the Developpers</h3>
+        <p>
+            Our project was created by a passionate team of developers:-
+        </p>
+        <ul>
+            <li>Mohammed Yasir K</li>
+            <li>Washim Shaikh</li>
+            <li>MD Shohil</li>
+            <li>Saqib A</li>
+        </ul>
+        <h3>Contact Us</h3>
+        <p>
+            For any quiries, feedback, or support, feel free to reach out to us:
+        </p>
+        <p>
+            <strong>Email:</strong> <a href="mailto:help.recipefinder@gmail.com">help.recipefinder@gmail.com</a>
+        </p>
+    </div>
+</div>
+<div class="banner">
+    <h1>Recipe Finder and Meal Planner</h1></div>
+    <section id="recipe-finder">
+        <h2>Find Recipes by Ingredients</h2>
+        <form id="ingredient-form">
+            <input type="text" id="ingredients-input" placeholder="Enter ingredients (comma separated)" required>
+            <select id="recipe-filter">
+                <option value="all">All</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non-vegetarian">Non-Vegetarian</option>
+            </select>
+            <button type="submit">Find Recipes</button>
+        </form>
+        <div id="recipe-results"></div>
+    </section>
+    <section id="meal-planner">
+        <h2>Weekly Meal Planner</h2>
+        <div id="calendar">
+            <div class="day" id="monday">Monday</div>
+            <div class="day" id="tuesday">Tuesday</div>
+            <div class="day" id="wednesday">Wednesday</div>
+            <div class="day" id="thursday">Thursday</div>
+            <div class="day" id="friday">Friday</div>
+            <div class="day" id="saturday">Saturday</div>
+            <div class="day" id="sunday">Sunday</div>
+        </div>
+        <button id="download-pdf">Download Plan</button>
+    </section>
+   <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h3 id="recipe-name"></h3>
+            <p id="recipe-description"></p>
+            <div class="recipe-details">
+                <img id="recipe-image" src="" alt="Recipe Image" />
+                <div>
+                    <h4>Ingredients:</h4>
+                    <ul id="recipe-ingredients"></ul>
+                </div>
+            </div>
+            <h4>Preparation:</h4>
+            <ol id="recipe-instructions"></ol>
+            <h4>Nutritional Information:</h4>
+            <p id="recipe-nutrition"></p>
+        </div>
+    </div> 
+    <footer>
+        <p>&copy; 2024 Recipe Finder and Meal Planner</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
